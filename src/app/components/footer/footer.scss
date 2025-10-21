@@ -1,0 +1,122 @@
+@import "config";
+
+
+footer{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../../../assets/batman.jpg');  
+    min-height: 350px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+  }
+  .footer-content{
+    display: flex;
+    max-width: 70%;
+    margin:40px auto;
+    color: #fff;
+    flex-direction: column;
+    
+    @include for-tablet-portrait-up{
+      flex-direction: row;
+    }
+    &__text{
+      max-width: 340px;
+      font-size: $font-sm;
+      h4{
+         font-size: $font-md;   
+      }
+      p{
+        color: #c7bfbe;
+      }
+      ul{
+        padding: 0;
+        list-style-type: none;
+        li{
+          margin: 5px 0;
+  
+          &:before{
+            content: '';
+            display: inline-block;
+            height: 10px;
+            width: 10px;
+            background-size: 10px;
+            background-image: url('../../../assets/check.png');
+            background-repeat: no-repeat;
+            margin-right: 5px;
+          }
+        }
+      }
+      
+    }
+    &__form{
+      max-width: 370px;
+    
+      h4{
+        font-size: $font-md;
+      }
+      form{
+        display: flex;
+        flex-wrap: wrap;
+      }
+    }  
+  }
+  
+  .form-row{
+ 
+    flex: 1 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    flex-direction: column;
+    margin: 0;
+    @include for-tablet-landscape-up{
+      flex-direction: row;
+    }
+    &__1{
+      input{
+      
+        &:last-child{
+          margin-left: 0;
+          @include for-tablet-landscape-up{
+            margin-left: 5px;
+          }
+        }
+      }
+    }
+    input{
+      padding: 10px;
+      border-radius: 5px;
+      border: none;
+      width: 100%;
+      margin: 5px auto;
+      
+    }
+    span{
+      font-size: $font-sm;
+        margin: 5px auto;
+      a{
+        text-decoration: none;
+        color: #fa735a;
+      }
+    }
+  }
+  
+  .btn{
+    display: block;
+    padding: 10px 20px;
+    text-align: center;
+    font-size: 14px;
+    background: #fa735a;
+    color: #fff;
+    font-weight: $bold;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    margin: 5px auto;
+    
+  }
+
+  

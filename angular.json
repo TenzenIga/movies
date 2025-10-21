@@ -29,6 +29,12 @@
                 "input": "public"
               }
             ],
+              "stylePreprocessorOptions":  {
+               "sass": {
+    "silenceDeprecations": ["mixed-decls", "color-functions", "global-builtin", "import"]
+  },
+              "includePaths": ["src/assets/scss/modules"]
+            },
             "styles": [
               "src/styles.scss"
             ]

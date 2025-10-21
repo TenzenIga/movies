@@ -1,0 +1,34 @@
+// primary font
+$primary_font: 'Roboto';
+
+// font-weight
+$thin:100;
+$light:300;
+$regular:400;
+$bold:700;
+$black:900;
+
+// Font size
+$font-xs:12px;
+$font-sm: 14px;
+$primary-fs: 16px;
+$font-md: 18px;
+$font-lg: 20px;
+
+
+  @mixin for-tablet-portrait-up {
+    @media (min-width: 600px) { @content; }
+  }
+
+  @mixin for-tablet-landscape-up {
+    @media (min-width: 900px) { @content; }
+  }
+
+  @mixin for-desktop-up {
+    @media (min-width: 1200px) { @content; }
+  }
+  
+
+
+
+

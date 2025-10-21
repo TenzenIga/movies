@@ -1,0 +1,15 @@
+<div class="bg-image">
+    <div class="search-wrapper">
+        <h2>Your favorite movies.</h2>
+        <input type="text" [ngModel]="searchInput"  (ngModelChange)="onSearchChange($event)"  placeholder="Search movies">
+        <div class="suggestions">
+        @if(data$ | async; as data){
+            @for(suggestion of data.Search; track suggestion.imdbID){
+                <p (click)="onSelect(suggestion)">
+              {{suggestion.Title}} 
+          </p>
+            }
+     }
+        </div>
+      </div>  
+  </div>

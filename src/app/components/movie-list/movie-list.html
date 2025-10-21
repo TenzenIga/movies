@@ -1,0 +1,12 @@
+<section class="movies-section">
+    <div class="container">
+      <div class="subheading">Popular movies</div>
+        <div class='movie-list'>
+            @for(movie of (movies$ | async); track movie.imdbID){
+                <div class="movie-list__item" (click)="onMovieClick(movie.imdbID)">
+          <img [src]="movie.Poster" />
+        </div>
+        }
+        </div>
+    </div>
+  </section>

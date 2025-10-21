@@ -1,0 +1,59 @@
+@import "_config"; 
+
+.movie{ 
+    display: flex;
+    padding: 10px;
+    justify-content: space-evenly;
+    background: #F2EFEE;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column-reverse;
+ 
+    @include for-tablet-landscape-up{
+        flex-direction: row;
+    }
+
+    &__img{
+        
+        border-radius: 10px;
+        width: 100%;
+        @include for-tablet-portrait-up{
+            width: 50vw;
+        }
+        @include for-tablet-landscape-up{
+            width: 40vw;
+        }
+        @include for-desktop-up{
+            width: 30vw;
+        }
+    }
+    &__detail{
+        margin-top: 20px;
+        width: 100%;
+        
+        @include for-tablet-landscape-up{
+            width: 40vw;
+        }
+    }
+    &__genre{
+        color: #9c9ba4;
+        font-size: $font-sm;
+    }
+    iframe{
+        margin-top: 50px;
+        width: 100%;
+        height: 350px;
+    }
+}
+
+.btn-back{
+    border: none;
+    font-size: $primary-fs;
+    background: transparent;
+    color: #9c9ba4;
+    cursor: pointer;
+    outline: none;
+    &:hover{
+        color: darken($color: #9c9ba4, $amount: 10%);
+    }
+}

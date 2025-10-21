@@ -1,0 +1,14 @@
+<section class="top-movie-section">
+    <div class="container">
+      <div class="subheading">Top rated movies</div>
+      
+      <div class='top-movie-list'>
+        @for(movie of (movies$ | async); track movie.imdbID){
+                <div  class="top-movie-list__item" (click)="onMovieClick(movie.imdbID)" >
+          <img [src]="movie.Poster" />
+        </div>
+        }
+  
+      </div>
+    </div>
+</section>

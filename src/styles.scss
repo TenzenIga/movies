@@ -1,1 +1,42 @@
-/* You can add global styles to this file, and also import other style files */
+@import "config";
+
+body, html {
+    font-family: $primary_font;
+    font-size: $primary-fs;
+    font-weight: $regular;
+    
+    height: 100%;
+    margin: 0;
+}
+
+  
+* {
+    box-sizing: border-box;
+}
+  
+
+p {
+    margin: 0;
+}
+
+.container{
+    max-width: 100%;
+    margin:40px auto;
+    @include for-tablet-portrait-up{
+        max-width: 90%;
+    }
+    @include for-tablet-landscape-up{
+        max-width: 70%;
+    }
+  }
+  .subheading{
+    padding: 11px 0px 5px 35px;
+    height: 40px;
+    font-size: $font-md;
+    font-weight: $bold;
+    background-image: url('./assets/flame.png');
+    background-repeat: no-repeat;
+    background-size: 25px;
+    background-position: 5px 8px; 
+  }
+  
